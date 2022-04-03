@@ -1,12 +1,14 @@
 import React from 'react';
-import Styles from './styles.module.css'
+import Styles from './styles.module.scss'
 
-function Button ({children, ...props}) {
+function Button ({children, label, ...props}) {
     return (
-        <div className={Styles.button}>
-            <h2>PageTitle Component</h2>
+        <button className={Styles.button} {...props}>
+            {label}
             {children}
-        </div>
+        </button>
+        
+        
     )
 }
 
